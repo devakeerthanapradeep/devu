@@ -9,7 +9,7 @@ export const getImageUrl = (imageUrl: string | undefined): string => {
   
   // Otherwise, prepend the backend URL
   // Using a fixed URL for now, can be made configurable later
-  const backendUrl = 'http://localhost:5000';
+  const backendUrl = import.meta.env.VITE_API_BASE_URL || 'https://devu-ae1n.onrender.com/';
   return `${backendUrl}${imageUrl}`;
 };
 
